@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>manejo DOM con js</title>
+  </head>
+
+  <body >
+    <h1 id="titulo" onmousedown="rojo(this)" onmouseup="azul(this)"  onclick="verde(this)">manejo don con jss</h1>
+    <br />
+
+    <script>
+
+        function rojo(todoElH1){
+            console.log('onmousedown cambio rojo')
+            todoElH1.style.color="red";
+        }
+        function azul(titulo){
+            console.log('onmouseup cambio azul')
+            titulo.style.color="blue";
+        }
+        function verde(titulo){
+            console.log('onclick cambio verde')
+            titulo.style.color="green";
+        }
+
+        
+        
+
+
+    </script>
+  </body>
+</html>

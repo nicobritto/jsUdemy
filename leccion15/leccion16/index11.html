@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>manejo DOM con js</title>
+  </head>
+
+  <body>
+    <h1 id="titulo">manejo don con jss</h1>
+    <br />
+    Nombre:<input type="text" id="nombre" /> <br />
+    <br />
+    Apellido:<input type="text" id="apellido" />
+
+    <script>
+      //funcion flecha para hacer mas corto el codigo pero no se puede reutilizar el codigo
+      document.getElementById("nombre").addEventListener("focus", (evento) => {
+        evento.target.style.background = "pink";
+      });
+       //funcion flecha para hacer mas corto el codigo
+      document.getElementById("nombre").addEventListener("blur", (evento) => {
+        evento.target.style.background = "";
+      });
+      // funciones separadas aca se puede reutilizar 
+      document.getElementById("apellido").addEventListener("focus", cambiar);
+      document.getElementById("apellido").addEventListener("blur", regresar);
+
+      function regresar(evento) {
+        let com = evento.target;
+        com.style.background = "white";
+      }
+
+      function cambiar(evento) {
+        //.target hace referencia a todo como por ejeplo si tuviera this
+        let com = evento.target;
+        com.style.background = "yellow";
+      }
+    </script>
+  </body>
+</html>
